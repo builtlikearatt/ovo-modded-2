@@ -895,7 +895,7 @@ export let runtime;
             } else if(key.startsWith("custom") && userConfig['mods'][key]['enabled'] === true) {
                 let js = document.createElement("script");
                 js.type = "application/javascript";
-                js.src = userConfig['mods'][key]["url"];
+                js.text = userConfig['mods'][key]["url"];
                 js.id = key;
                 document.head.appendChild(js);
                 document.getElementById("cheat-indicator").style.display = "block";
